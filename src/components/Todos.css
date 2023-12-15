@@ -1,0 +1,48 @@
+.todo {
+    width: 100%;
+    background-color: #25273c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000050;
+}
+
+.todo p {
+    color: #fff;
+    font-weight: 800;
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.buttons_container button {
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.buttons_container button svg {
+    color: #25273c;
+    font-size: 1.5em;
+}
+
+.buttons_container button:hover {
+    background-color: #25273c;    
+}
+
+.buttons_container button:hover > svg {
+    color: #fff;
+}
