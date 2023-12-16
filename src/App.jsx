@@ -3,11 +3,13 @@ import './App.css'
 import TodoForm from './components/TodoForm'
 import Todos from './components/Todos'
 import Filter from './components/Filter'
+import TodoMode from './components/TodoMode'
 
 export default function App() {
 
   const [todos, setTodos] = useState([])
   const [filter, setFilter] = useState("all")
+  const [darkMode, setDarkMode] = useState(true)
 
   const addTodo = (text) => {
     const newTodos = [...todos, {
@@ -31,8 +33,20 @@ export default function App() {
     setTodos(filterTodos)
   }
 
+  const toggleMode = () => {
+    setDarkMode(!darkMode)
+    const html = document.querySelector('html')
+    html.classList.toggle('light-mode')
+}
+
   return (
     <section className='section_principal'>
+      <TodoMode
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+        toggleMode={toggleMode}
+      />
+
       <TodoForm addTodo={addTodo}/>
       <Filter filter={filter} setFilter={setFilter}/>
 
