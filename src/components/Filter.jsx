@@ -7,7 +7,7 @@ export default function Filter(props) {
             <select name="filtrar" id="filtrar" value={props.filter} onChange={(e) => props.setFilter(e.target.value)}>
                 <option value="all">Todos</option>
                 <option value="complete">Completos</option>
-                <option value="incomplete">Imcompletos</option>
+                <option value="incomplete">Incompletos</option>
             </select>
         </div>
     )
