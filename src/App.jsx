@@ -16,6 +16,26 @@ export default function App() {
     setTodos(newTodos)
   }
 
+  /*const completeTodo = (id) => {
+    const newTodos = [...todos]
+    newTodos.map((todo) => todo.id === id ? todo.isCompleted = !todo.isCompleted : todo)
+    setTodos(newTodos)
+  }*/
+
+  const completeTodo = (id) => {
+    const newTodos = todos.map(todo =>
+      todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+    );
+    setTodos(newTodos);
+  }
+  
+
+  const removeTodo = (id) => {
+    const newTodos = [...todos]
+    const filterTodos = newTodos.filter(todo => todo.id !== id ? todo : null)
+    setTodos(filterTodos)
+  }
+
   return (
     <section className='section_principal'>
       <TodoForm addTodo={addTodo}/>
@@ -25,6 +45,9 @@ export default function App() {
           return <Todos 
             id={todo.id}
             text={todo.text}
+            removeTodo={removeTodo}
+            completeTodo={completeTodo}
+            isCompleted={todo.isCompleted}
           />
         })}
       </ul>

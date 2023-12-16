@@ -46,3 +46,20 @@
 .buttons_container button:hover > svg {
     color: #fff;
 }
+
+.done {
+    background-color: #393a4c;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000050;
+}
+
+.done p {
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 800;
+}
