@@ -8,6 +8,8 @@ export default function TodoInput(props) {
     const [value, setValue] = useState("")
     const inputRef = useRef(null);
 
+    
+
     const handleSubmit = (e) => {
         e.preventDefault()
         if (!value) return
@@ -18,19 +20,21 @@ export default function TodoInput(props) {
     }
 
     return (
-        <form className='input_container' onSubmit={handleSubmit} autoComplete='off'>
-            <label htmlFor="input">Adicione sua Tarefa: </label>
-            <input 
-                id='input'
-                ref={inputRef}
-                type="text" 
-                placeholder='O que você tem que fazer hoje?' 
-                onChange={(e) => setValue(e.target.value)} 
-                value={value} 
-            />
-            <button type='submit'>
-                <IoIosAdd />
-            </button>
+        <form onSubmit={handleSubmit} autoComplete='off'>
+            <div className="input_container">
+                <label htmlFor="input">Adicione sua Tarefa: </label>
+                <input
+                    id='input'
+                    ref={inputRef}
+                    type="text"
+                    placeholder='O que você tem que fazer hoje?'
+                    onChange={(e) => setValue(e.target.value)}
+                    value={value}
+                />
+                <button type='submit'>
+                    <IoIosAdd />
+                </button>
+            </div>
         </form>
     )
 }
