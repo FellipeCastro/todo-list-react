@@ -16,7 +16,6 @@
 
 .todos_container {
     width: 500px;
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 1em;
