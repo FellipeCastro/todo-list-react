@@ -28,6 +28,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 2em;
+    transition: .5s;
 }
 
 .todos_container {
@@ -35,4 +36,10 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+
+@media screen and (max-width: 500px) {
+    .todos_container {
+        width: 100%;
+    }
 }

@@ -15,10 +15,18 @@
     background-color: transparent;
     border: none;
     padding: 1em;
+    transition: .5s;
 }
 
 .icon_container svg {
     color: var(--text-color);
     font-size: 2em;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 500px) {
+    .mode_container {
+        width: 100%;
+    }
 }
